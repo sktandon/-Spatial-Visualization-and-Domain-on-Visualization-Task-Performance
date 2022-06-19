@@ -7,16 +7,11 @@ from training.routes import training_bp
 
 # Create the application.
 app = (flask.Flask(__name__, instance_relative_config=True))
-# app.config["MYSQL_HOST"] = "mysql2.nms.kcl.ac.uk"
-# app.config["MYSQL_PORT"] = 33306
-# app.config["MYSQL_USER"] = "k1758447"
-# app.config["MYSQL_PASSWORD"] = "pinkings1"
-# app.config["MYSQL_DB"] = "k1758447_study2"
 
 app.config["MYSQL_HOST"] = "localhost"
 app.config["MYSQL_USER"] = "root"
 app.config["MYSQL_PASSWORD"] = ""
-app.config["MYSQL_DB"] = "study-2-pilot"
+app.config["MYSQL_DB"] = "your-database"
 
 app.config["MYSQL_CURSORCLASS"] = "DictCursor"
 mysql = MySQL(app)
