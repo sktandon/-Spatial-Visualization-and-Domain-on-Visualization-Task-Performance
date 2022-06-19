@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+{% block title %}
+PODS KCL Survey
+{% endblock %}
+{% block style%}
+<style>
+body {
+    
+  background-color: #FAF5F0;
+}
+</style>
+{%endblock%}
+{% block content %}
+
+        <h1>You finished Part 1!</h1>
+        <br>
+        <h4>Now you're going to begin Part 2
+        <br>
+        <img src="/static/img/Logo.PNG" class="w3-padding" 
+        style="width:100%; max-width:330px; height: 100%; max-height: 321px;"></img>
+        <br>
+        <h5 style="color: green;">Press next when you're ready</h5>
+        <p><a href="{{ url_for('training_bp.instruction') }}"><button class="w3-button w3-blue-gray w3-round-xlarge w3-margin-bottom">Next</button></a></p>
+
+        <div class="w3-container center" style="margin-bottom: 15px">
+            <ol class="custom-progress-bar">
+                <li class="is-complete"><span>Intro</span></li>
+                <li class="is-complete"><span>Part 1 Training</span></li>
+                <li class="is-complete"><span>Part 1</span></li>
+                <li class="is-active"><span>Part 2 Training</span></li>
+                <li><span>Part 2</span></li>
+                <li><span>Part 2</span></li>
+                <li><span>Part 2</span></li>
+                <li><span>Final Questions</span></li>
+                <li><span>End</span></li>
+            </ol>
+        </div>
+        
+
+
+{% endblock %}

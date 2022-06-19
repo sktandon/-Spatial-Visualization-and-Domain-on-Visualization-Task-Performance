@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+{% block title %}
+PODS KCL Survey
+{% endblock %}
+{% block style%}
+<style>
+body {
+    background-image: url(/static/img/Banner.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center top;
+    background-size: 100% auto; 
+  background-color: #FAF5F0;
+}
+</style>
+{%endblock%}
+{% block content %}
+
+
+<!--<h1>Welcome!</h1>
+<h5>Key Information:</h5>
+<p style="margin-left: 7em; margin-right: 7em;">
+   This is where I will ask for consent! </p>-->
+   
+
+<div   class="w3-container">
+<img src="/static/img/Logo.PNG" class="w3-padding" style="float: right; width:100%; max-width:330px; height: 100%; max-height: 321px;"></img>
+
+<br>
+<h1>Welcome</h1>
+<h2>Let's test your spatial rotation ability!</h2>
+<br>
+<br>
+
+<h5> <b>How good is your spatial manipulation of data?</b><h5> <p style="margin: auto;">Contribute to PhD research by taking this multiple choice survey!</p>
+<h5>
+
+<br>
+<h5 style="color: #F46A61"><i> Trigger Warning: this survey contains questions with Covid-19 Pandemic related data, including
+case, hospitalization, death, and vaccination statistics.</i></h5>
+<p id="next_btn" style="padding: 5px;" type=button><a href="{{ url_for('consent') }}"><button class="w3-button w3-blue-gray w3-round-xlarge w3-margin-bottom">Start >></button></a></p>
+<p><i>This study requires a laptop or desktop computer. It will not work on a phone or tablet. The test may also not work properly on older versions of Internet Explorer.
+    We apologize for not being able to suppport all browsers.
+</i></p>
+
+</div>
+
+
+
+{% endblock %}

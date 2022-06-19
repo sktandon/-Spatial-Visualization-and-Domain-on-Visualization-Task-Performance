@@ -1,0 +1,269 @@
+{% extends "layout.html" %}
+{% block title %}
+PODS KCL Survey
+{% endblock %}
+{% block style%}
+<style>
+body {
+    
+  background-color: #FAF5F0;
+}
+</style>
+{%endblock%}
+{% block content %}
+
+
+
+<h1>Final Questions & Feedback</h1>
+<br>
+
+<div class="bootstrap-iso">
+    <div class="container-fluid">
+        <div class="center">
+            <form method="post">
+                <div class="form-group" id="div_diff1">
+                    <label class="control-label " for="diff1" style="pointer-events: none;">
+                        <h4><b>How difficult was Part 1 (paper folding game) for you?</b></h4>
+                    </label>
+                    <div class="">
+                        <label class="radio-inline">
+                            <input name="diff1" type="radio" value="Easy" required/>
+                            Easy
+                        </label>
+                        <label class="radio-inline">
+                            <input name="diff1" type="radio" value="Fairly Easy" />
+                            Fairly Easy
+                        </label>
+                        <label class="radio-inline">
+                            <input name="diff1" type="radio" value="Neither" />
+                            Neither
+                        </label>
+                        <label class="radio-inline">
+                            <input name="diff1" type="radio" value="Fairly Difficult" />
+                            Fairly Difficult
+                        </label>
+                        <label class="radio-inline">
+                            <input name="diff1" type="radio" value="Difficult" />
+                            Difficult
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group" id="div_diff2">
+                    <label class="control-label " for="diff2" style="pointer-events: none;">
+                        <h4><b>How difficult was Part 2 (graphs and multiple choice questions) for you?</b></h4>
+                    </label>
+                    <div class="">
+                        <label class="radio-inline">
+                            <input name="diff2" type="radio" value="Easy" required/>
+                            Easy
+                        </label>
+                        <label class="radio-inline">
+                            <input name="diff2" type="radio" value="Fairly Easy" />
+                            Fairly Easy
+                        </label>
+                        <label class="radio-inline">
+                            <input name="diff2" type="radio" value="Neither" />
+                            Neither
+                        </label>
+                        <label class="radio-inline">
+                            <input name="diff2" type="radio" value="Fairly Difficult" />
+                            Fairly Difficult
+                        </label>
+                        <label class="radio-inline">
+                            <input name="diff2" type="radio" value="Difficult" />
+                            Difficult
+                        </label>
+                    </div>
+                </div>
+
+                <br>
+                
+                <h3><b>Please respond to each of the following statements: </b></h3>
+                <br>
+                <div class="form-group" id="intrinsic">
+                    <label class="control-label " for="intrinsic" style="pointer-events: none;">
+                        <h4><b>I spend a lot of my own time learning about data visualization.</b></h4>
+                    </label>
+                    <div class="">
+                        <label class="radio-inline">
+                            <input name="intrinsic" type="radio" value="0" required/>
+                            Never
+                        </label>
+                        <label class="radio-inline">
+                            <input name="intrinsic" type="radio" value="1" />
+                            Rarely
+                        </label>
+                        <label class="radio-inline">
+                            <input name="intrinsic" type="radio" value="2" />
+                            Sometimes
+                        </label>
+                        <label class="radio-inline">
+                            <input name="intrinsic" type="radio" value="3" />
+                            Often
+                        </label>
+                        <label class="radio-inline">
+                            <input name="intrinsic" type="radio" value="4" />
+                            Always
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group" id="extrinsic">
+                    <label class="control-label " for="extrinsic" style="pointer-events: none;">
+                        <h4><b>My career or studies involve data visualization.</b></h4>
+                    </label>
+                    <div class="">
+                        <label class="radio-inline">
+                            <input name="extrinsic" type="radio" value="0" required/>
+                            Never
+                        </label>
+                        <label class="radio-inline">
+                            <input name="extrinsic" type="radio" value="1" />
+                            Rarely
+                        </label>
+                        <label class="radio-inline">
+                            <input name="extrinsic" type="radio" value="2" />
+                            Sometimes
+                        </label>
+                        <label class="radio-inline">
+                            <input name="extrinsic" type="radio" value="3" />
+                            Often
+                        </label>
+                        <label class="radio-inline">
+                            <input name="extrinsic" type="radio" value="4" />
+                            Always
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group" id="selfeff">
+                    <label class="control-label " for="selfeff" style="pointer-events: none;">
+                        <h4><b>I am confident I perform well on data visualization tasks.</b></h4>
+                    </label>
+                    <div class="">
+                        <label class="radio-inline">
+                            <input name="selfeff" type="radio" value="0" required/>
+                            Never
+                        </label>
+                        <label class="radio-inline">
+                            <input name="selfeff" type="radio" value="1" />
+                            Rarely
+                        </label>
+                        <label class="radio-inline">
+                            <input name="selfeff" type="radio" value="2" />
+                            Sometimes
+                        </label>
+                        <label class="radio-inline">
+                            <input name="selfeff" type="radio" value="3" />
+                            Often
+                        </label>
+                        <label class="radio-inline">
+                            <input name="selfeff" type="radio" value="4" />
+                            Always
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group" id="selfdet">
+                    <label class="control-label " for="selfdet" style="pointer-events: none;">
+                        <h4><b>I put effort into learning how to use data visualization.</b></h4>
+                    </label>
+                    <div class="">
+                        <label class="radio-inline">
+                            <input name="selfdet" type="radio" value="0" required/>
+                            Never
+                        </label>
+                        <label class="radio-inline">
+                            <input name="selfdet" type="radio" value="1" />
+                            Rarely
+                        </label>
+                        <label class="radio-inline">
+                            <input name="selfdet" type="radio" value="2" />
+                            Sometimes
+                        </label>
+                        <label class="radio-inline">
+                            <input name="selfdet" type="radio" value="3" />
+                            Often
+                        </label>
+                        <label class="radio-inline">
+                            <input name="selfdet" type="radio" value="4" />
+                            Always
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group" id="anxiety">
+                    <label class="control-label " for="anxiety" style="pointer-events: none;">
+                        <h4><b>I become anxious when math is involved in data visualization.</b></h4>
+                    </label>
+                    <div class="">
+                        <label class="radio-inline">
+                            <input name="anxiety" type="radio" value="0" required/>
+                            Never
+                        </label>
+                        <label class="radio-inline">
+                            <input name="anxiety" type="radio" value="1" />
+                            Rarely
+                        </label>
+                        <label class="radio-inline">
+                            <input name="anxiety" type="radio" value="2" />
+                            Sometimes
+                        </label>
+                        <label class="radio-inline">
+                            <input name="anxiety" type="radio" value="3" />
+                            Often
+                        </label>
+                        <label class="radio-inline">
+                            <input name="anxiety" type="radio" value="4" />
+                            Always
+                        </label>
+                    </div>
+                </div>
+                
+                <br>
+
+                <h4>Do you have any feedback or concerns regarding the study to share with the researchers? <i>(optional)</i></h4>
+                <div class="form-group row">
+                    <label class="col-form-label col-sm-2" for="feedback" style="pointer-events: none; font-size: large;">Feedback
+                    </label>
+                    <div class="col-sm-9">
+                            <textarea class="form-control" id="feedback" name="feedback" rows="2"></textarea>
+                    </div>
+            </div>
+
+            <br>
+
+                <div class="form-group">
+                    <div>
+                        <br>
+                        <b style="font-size: large; color: #007200;">This is the final page of questions!</b>
+                        <br>
+                        <br>
+                        <button class="w3-button w3-blue-gray w3-round-xlarge w3-margin-bottom" name="submit"
+                            type="submit">
+                            Submit
+                        </button>
+                    </div>
+                </div>   
+
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="w3-container center" style="margin-bottom: 15px">
+    <ol class="custom-progress-bar">
+        <li class="is-complete"><span>Intro</span></li>
+        <li class="is-complete"><span>Part 1 Training</span></li>
+        <li class="is-complete"><span>Part 1</span></li>
+        <li class="is-complete"><span>Part 1</span></li>
+        <li class="is-complete"><span>Part 1</span></li>
+        <li class="is-complete"><span>Part 2 Training</span></li>
+        <li class="is-complete"><span>Part 2</span></li>
+        <li class="is-active"><span>Final Questions</span></li>
+        <li><span>End</span></li>
+    </ol>
+</div>
+
+
+
+{% endblock %}

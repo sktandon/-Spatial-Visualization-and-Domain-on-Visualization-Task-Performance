@@ -1,0 +1,693 @@
+{% extends "layout.html" %}
+{% block title %}
+PODS KCL Survey
+{% endblock %}
+{% block style%}
+<style>
+body {
+    
+  background-color: #FAF5F0;
+}
+</style>
+{%endblock%}
+{% block content %}
+
+    <div id="Q1">
+        <h1>Question 1</h1>
+        <h4>Give it a go!
+        </h4>
+        <div class="w3-container">
+                <input type="image" src="{{ url_for('static', filename='img/SpAb_Assess/1/q.PNG')}}" width="35%" style="pointer-events: none; margin-top: 2em"/>
+                <hr style="border: 2px solid black; width: 50%; margin: auto; margin-bottom: 2em; margin-top: 2em" >
+             <div class="row" style="margin: auto">
+                 <fieldset>
+                     <div class="column">
+                         <input type="radio" name="paper1" class="sr-only" id="A1" value="A">
+                         <label for="A1">
+                             <img src="{{ url_for('static', filename='img/SpAb_Assess/1/A.PNG')}}" style="max-width: 100%" alt="A1">
+                         </label></div>
+                     <div class ="column">
+                         <input type="radio" name="paper1" class="sr-only" id="B1" value="B">
+                         <label for="B1">
+                             <img src="{{ url_for('static', filename='img/SpAb_Assess/1/B.PNG')}}" style="max-width: 100%" alt="B1">
+                         </label></div>
+                     <div class ="column">
+                         <input type="radio" name="paper1" class="sr-only" id="C1" value="C">
+                         <label for="C1">
+                             <img src="{{ url_for('static', filename='img/SpAb_Assess/1/C.PNG')}}" style="max-width: 100%" alt="C1">
+                         </label></div>
+                     <div class ="column">
+                         <input type="radio" name="paper1" class="sr-only" id="D1" value="D">
+                         <label for="D1">
+                             <img src="{{ url_for('static', filename='img/SpAb_Assess/1/D.PNG')}}" style="max-width: 100%" alt="D1">
+                         </label></div>
+                     <div class ="column">
+                         <input type="radio" name="paper1" class="sr-only" id="E1" value="E">
+                         <label for="E1">
+                             <img src="{{ url_for('static', filename='img/SpAb_Assess/1/E.PNG')}}" style="max-width: 100%" alt="E1">
+                         </label></div>
+     
+                 </fieldset>
+             </div>
+            </div>
+
+            <h4>Press Next after you've selected your guess!</h4>
+            <p><button id="btn1" class="w3-button w3-blue-gray w3-round-xlarge w3-margin-bottom">Next</button></p>
+
+            <script>
+            $(document).ready(function() {
+    
+             var $button= $("#btn1").hide(),
+            $cbs = $('input[name="paper1"]').click(function() {
+                $button.toggle( $cbs.is(":checked") );
+              });
+
+            });
+            </script>
+
+</div>
+
+
+    <div id="Q2" style="display: none;">
+        <h1>Question 2
+        </h1>
+
+        <div class="w3-container">
+            <input type="image" src="{{ url_for('static', filename='img/SpAb_Assess/2/q.PNG')}}" width="45%" style="pointer-events: none; margin-top: 2em"/>
+            <hr style="border: 2px solid black; width: 50%; margin: auto; margin-bottom: 2em; margin-top: 2em" >
+         <div class="row" style="margin: auto">
+             <fieldset>
+                 <div class="column">
+                     <input type="radio" name="paper2" class="sr-only" id="A2" value="A">
+                     <label for="A2">
+                         <img src="{{ url_for('static', filename='img/SpAb_Assess/2/A.PNG')}}" style="max-width: 100%" alt="A2">
+                     </label></div>
+                 <div class ="column">
+                     <input type="radio" name="paper2" class="sr-only" id="B2" value="B">
+                     <label for="B2">
+                         <img src="{{ url_for('static', filename='img/SpAb_Assess/2/B.PNG')}}" style="max-width: 100%" alt="B2">
+                     </label></div>
+                 <div class ="column">
+                     <input type="radio" name="paper2" class="sr-only" id="C2" value="C">
+                     <label for="C2">
+                         <img src="{{ url_for('static', filename='img/SpAb_Assess/2/C.PNG')}}" style="max-width: 100%" alt="C2">
+                     </label></div>
+                 <div class ="column">
+                     <input type="radio" name="paper2" class="sr-only" id="D2" value="D">
+                     <label for="D2">
+                         <img src="{{ url_for('static', filename='img/SpAb_Assess/2/D.PNG')}}" style="max-width: 100%" alt="D2">
+                     </label></div>
+                 <div class ="column">
+                     <input type="radio" name="paper2" class="sr-only" id="E2" value="E">
+                     <label for="E2">
+                         <img src="{{ url_for('static', filename='img/SpAb_Assess/2/E.PNG')}}" style="max-width: 100%" alt="E2">
+                     </label></div>
+ 
+             </fieldset>
+         </div>
+        </div>
+            <h4>Press Next after you've selected your guess!</h4>
+            <p><button id="btn2" class="w3-button w3-blue-gray w3-round-xlarge w3-margin-bottom">Next</button></p>
+
+            
+            <script>
+                $(document).ready(function() {
+        
+                 var $button= $("#btn2").hide(),
+                $cbs = $('input[name="paper2"]').click(function() {
+                    $button.toggle( $cbs.is(":checked") );
+                  });
+    
+                });
+                </script>
+    </div>
+
+
+
+    <div id="Q3" style="display: none;">
+        <h1>Question 3
+        </h1>
+
+        <div class="w3-container">
+            <input type="image" src="{{ url_for('static', filename='img/SpAb_Assess/3/q.PNG')}}" width="45%" style="pointer-events: none; margin-top: 2em"/>
+            <hr style="border: 2px solid black; width: 50%; margin: auto; margin-bottom: 2em; margin-top: 2em" >
+         <div class="row" style="margin: auto">
+             <fieldset>
+                 <div class="column">
+                     <input type="radio" name="paper3" class="sr-only" id="A3" value="A">
+                     <label for="A3">
+                         <img src="{{ url_for('static', filename='img/SpAb_Assess/3/A.PNG')}}" style="max-width: 100%" alt="A3">
+                     </label></div>
+                 <div class ="column">
+                     <input type="radio" name="paper3" class="sr-only" id="B3" value="B">
+                     <label for="B3">
+                         <img src="{{ url_for('static', filename='img/SpAb_Assess/3/B.PNG')}}" style="max-width: 100%" alt="B3">
+                     </label></div>
+                 <div class ="column">
+                     <input type="radio" name="paper3" class="sr-only" id="C3" value="C">
+                     <label for="C3">
+                         <img src="{{ url_for('static', filename='img/SpAb_Assess/3/C.PNG')}}" style="max-width: 100%" alt="C3">
+                     </label></div>
+                 <div class ="column">
+                     <input type="radio" name="paper3" class="sr-only" id="D3" value="D">
+                     <label for="D3">
+                         <img src="{{ url_for('static', filename='img/SpAb_Assess/3/D.PNG')}}" style="max-width: 100%" alt="D3">
+                     </label></div>
+                 <div class ="column">
+                     <input type="radio" name="paper3" class="sr-only" id="E3" value="E">
+                     <label for="E3">
+                         <img src="{{ url_for('static', filename='img/SpAb_Assess/3/E.PNG')}}" style="max-width: 100%" alt="E3">
+                     </label></div>
+ 
+             </fieldset>
+         </div>
+        </div>
+            <h4>Press Next after you've selected your guess!</h4>
+            <p><button id="btn3" class="w3-button w3-blue-gray w3-round-xlarge w3-margin-bottom">Next</button></p>
+
+            <script>
+                $(document).ready(function() {
+        
+                 var $button= $("#btn3").hide(),
+                $cbs = $('input[name="paper3"]').click(function() {
+                    $button.toggle( $cbs.is(":checked") );
+                  });
+    
+                });
+                </script>
+    </div>
+
+    <div id="Q4" style="display: none;">
+        <h1>Question 4
+        </h1>
+
+        <div class="w3-container">
+            <input type="image" src="{{ url_for('static', filename='img/SpAb_Assess/4/q.PNG')}}" width="45%" style="pointer-events: none; margin-top: 2em"/>
+            <hr style="border: 2px solid black; width: 50%; margin: auto; margin-bottom: 2em; margin-top: 2em" >
+         <div class="row" style="margin: auto">
+             <fieldset>
+                 <div class="column">
+                     <input type="radio" name="paper4" class="sr-only" id="A4" value="A">
+                     <label for="A4">
+                         <img src="{{ url_for('static', filename='img/SpAb_Assess/4/A.PNG')}}" style="max-width: 100%" alt="A4">
+                     </label></div>
+                 <div class ="column">
+                     <input type="radio" name="paper4" class="sr-only" id="B4" value="B">
+                     <label for="B4">
+                         <img src="{{ url_for('static', filename='img/SpAb_Assess/4/B.PNG')}}" style="max-width: 100%" alt="B4">
+                     </label></div>
+                 <div class ="column">
+                     <input type="radio" name="paper4" class="sr-only" id="C4" value="C">
+                     <label for="C4">
+                         <img src="{{ url_for('static', filename='img/SpAb_Assess/4/C.PNG')}}" style="max-width: 100%" alt="C4">
+                     </label></div>
+                 <div class ="column">
+                     <input type="radio" name="paper4" class="sr-only" id="D4" value="D">
+                     <label for="D4">
+                         <img src="{{ url_for('static', filename='img/SpAb_Assess/4/D.PNG')}}" style="max-width: 100%" alt="D4">
+                     </label></div>
+                 <div class ="column">
+                     <input type="radio" name="paper4" class="sr-only" id="E4" value="E">
+                     <label for="E4">
+                         <img src="{{ url_for('static', filename='img/SpAb_Assess/4/E.PNG')}}" style="max-width: 100%" alt="E4">
+                     </label></div>
+ 
+             </fieldset>
+         </div>
+        </div>
+            <h4>Press Next after you've selected your guess!</h4>
+            <p><button id="btn4" class="w3-button w3-blue-gray w3-round-xlarge w3-margin-bottom">Next</button></p>
+
+            <script>
+                $(document).ready(function() {
+        
+                 var $button= $("#btn4").hide(),
+                $cbs = $('input[name="paper4"]').click(function() {
+                    $button.toggle( $cbs.is(":checked") );
+                  });
+    
+                });
+                </script>
+    </div>
+
+    <div id="Q5" style="display: none;">
+        <h1>Question 5
+        </h1>
+
+        <div class="w3-container">
+            <input type="image" src="{{ url_for('static', filename='img/SpAb_Assess/5/q.PNG')}}" width="45%" style="pointer-events: none; margin-top: 2em"/>
+            <hr style="border: 2px solid black; width: 50%; margin: auto; margin-bottom: 2em; margin-top: 2em" >
+         <div class="row" style="margin: auto">
+             <fieldset>
+                 <div class="column">
+                     <input type="radio" name="paper5" class="sr-only" id="A5" value="A">
+                     <label for="A5">
+                         <img src="{{ url_for('static', filename='img/SpAb_Assess/5/A.PNG')}}" style="max-width: 100%" alt="A5">
+                     </label></div>
+                 <div class ="column">
+                     <input type="radio" name="paper5" class="sr-only" id="B5" value="B">
+                     <label for="B5">
+                         <img src="{{ url_for('static', filename='img/SpAb_Assess/5/B.PNG')}}" style="max-width: 100%" alt="B5">
+                     </label></div>
+                 <div class ="column">
+                     <input type="radio" name="paper5" class="sr-only" id="C5" value="C">
+                     <label for="C5">
+                         <img src="{{ url_for('static', filename='img/SpAb_Assess/5/C.PNG')}}" style="max-width: 100%" alt="C5">
+                     </label></div>
+                 <div class ="column">
+                     <input type="radio" name="paper5" class="sr-only" id="D5" value="D">
+                     <label for="D5">
+                         <img src="{{ url_for('static', filename='img/SpAb_Assess/5/D.PNG')}}" style="max-width: 100%" alt="D5">
+                     </label></div>
+                 <div class ="column">
+                     <input type="radio" name="paper5" class="sr-only" id="E5" value="E">
+                     <label for="E5">
+                         <img src="{{ url_for('static', filename='img/SpAb_Assess/5/E.PNG')}}" style="max-width: 100%" alt="E5">
+                     </label></div>
+ 
+             </fieldset>
+         </div>
+        </div>
+            <h4>Press Next after you've selected your guess!</h4>
+            <p><button id="btn5" class="w3-button w3-blue-gray w3-round-xlarge w3-margin-bottom">Next</button></p>
+
+            <script>
+                $(document).ready(function() {
+        
+                 var $button= $("#btn5").hide(),
+                $cbs = $('input[name="paper5"]').click(function() {
+                    $button.toggle( $cbs.is(":checked") );
+                  });
+    
+                });
+                </script>
+    </div>
+
+    <div id="Q6" style="display: none;">
+        <h1>Question 6
+        </h1>
+
+        <div class="w3-container">
+            <input type="image" src="{{ url_for('static', filename='img/SpAb_Assess/6/q.PNG')}}" width="55%" style="pointer-events: none; margin-top: 2em"/>
+            <hr style="border: 2px solid black; width: 50%; margin: auto; margin-bottom: 2em; margin-top: 2em" >
+         <div class="row" style="margin: auto">
+             <fieldset>
+                 <div class="column">
+                     <input type="radio" name="paper6" class="sr-only" id="A6" value="A">
+                     <label for="A6">
+                         <img src="{{ url_for('static', filename='img/SpAb_Assess/6/A.PNG')}}" style="max-width: 100%" alt="A6">
+                     </label></div>
+                 <div class ="column">
+                     <input type="radio" name="paper6" class="sr-only" id="B6" value="B">
+                     <label for="B6">
+                         <img src="{{ url_for('static', filename='img/SpAb_Assess/6/B.PNG')}}" style="max-width: 100%" alt="B6">
+                     </label></div>
+                 <div class ="column">
+                     <input type="radio" name="paper6" class="sr-only" id="C6" value="C">
+                     <label for="C6">
+                         <img src="{{ url_for('static', filename='img/SpAb_Assess/6/C.PNG')}}" style="max-width: 100%" alt="C6">
+                     </label></div>
+                 <div class ="column">
+                     <input type="radio" name="paper6" class="sr-only" id="D6" value="D">
+                     <label for="D6">
+                         <img src="{{ url_for('static', filename='img/SpAb_Assess/6/D.PNG')}}" style="max-width: 100%" alt="D6">
+                     </label></div>
+                 <div class ="column">
+                     <input type="radio" name="paper6" class="sr-only" id="E6" value="E">
+                     <label for="E6">
+                         <img src="{{ url_for('static', filename='img/SpAb_Assess/6/E.PNG')}}" style="max-width: 100%" alt="E6">
+                     </label></div>
+ 
+             </fieldset>
+         </div>
+        </div>
+            <h4>Press Next after you've selected your guess!</h4>
+            <p><button id="btn6" class="w3-button w3-blue-gray w3-round-xlarge w3-margin-bottom">Next</button></p>
+
+            <script>
+                $(document).ready(function() {
+        
+                 var $button= $("#btn6").hide(),
+                $cbs = $('input[name="paper6"]').click(function() {
+                    $button.toggle( $cbs.is(":checked") );
+                  });
+    
+                });
+                </script>
+    </div>
+
+    <div id="Q7" style="display: none;">
+        <h1>Question 7
+        </h1>
+
+        <div class="w3-container">
+            <input type="image" src="{{ url_for('static', filename='img/SpAb_Assess/7/q.PNG')}}" width="45%" style="pointer-events: none; margin-top: 2em"/>
+            <hr style="border: 2px solid black; width: 50%; margin: auto; margin-bottom: 2em; margin-top: 2em" >
+         <div class="row" style="margin: auto">
+             <fieldset>
+                 <div class="column">
+                     <input type="radio" name="paper7" class="sr-only" id="A7" value="A">
+                     <label for="A7">
+                         <img src="{{ url_for('static', filename='img/SpAb_Assess/7/A.PNG')}}" style="max-width: 100%" alt="A7">
+                     </label></div>
+                 <div class ="column">
+                     <input type="radio" name="paper7" class="sr-only" id="B7" value="B">
+                     <label for="B7">
+                         <img src="{{ url_for('static', filename='img/SpAb_Assess/7/B.PNG')}}" style="max-width: 100%" alt="B7">
+                     </label></div>
+                 <div class ="column">
+                     <input type="radio" name="paper7" class="sr-only" id="C7" value="C">
+                     <label for="C7">
+                         <img src="{{ url_for('static', filename='img/SpAb_Assess/7/C.PNG')}}" style="max-width: 100%" alt="C7">
+                     </label></div>
+                 <div class ="column">
+                     <input type="radio" name="paper7" class="sr-only" id="D7" value="D">
+                     <label for="D7">
+                         <img src="{{ url_for('static', filename='img/SpAb_Assess/7/D.PNG')}}" style="max-width: 100%" alt="D7">
+                     </label></div>
+                 <div class ="column">
+                     <input type="radio" name="paper7" class="sr-only" id="E7" value="E">
+                     <label for="E7">
+                         <img src="{{ url_for('static', filename='img/SpAb_Assess/7/E.PNG')}}" style="max-width: 100%" alt="E7">
+                     </label></div>
+ 
+             </fieldset>
+         </div>
+        </div>
+            <h4>Press Next after you've selected your guess!</h4>
+            <p><button id="btn7" class="w3-button w3-blue-gray w3-round-xlarge w3-margin-bottom">Next</button></p>
+
+            <script>
+                $(document).ready(function() {
+        
+                 var $button= $("#btn7").hide(),
+                $cbs = $('input[name="paper7"]').click(function() {
+                    $button.toggle( $cbs.is(":checked") );
+                  });
+    
+                });
+                </script>
+    </div>
+
+    <div id="Q8" style="display: none;">
+        <h1>Question 8
+        </h1>
+
+        <div class="w3-container">
+            <input type="image" src="{{ url_for('static', filename='img/SpAb_Assess/8/q.PNG')}}" width="55%" style="pointer-events: none; margin-top: 2em"/>
+            <hr style="border: 2px solid black; width: 50%; margin: auto; margin-bottom: 2em; margin-top: 2em" >
+         <div class="row" style="margin: auto">
+             <fieldset>
+                 <div class="column">
+                     <input type="radio" name="paper8" class="sr-only" id="A8" value="A">
+                     <label for="A8">
+                         <img src="{{ url_for('static', filename='img/SpAb_Assess/8/A.PNG')}}" style="max-width: 100%" alt="A8">
+                     </label></div>
+                 <div class ="column">
+                     <input type="radio" name="paper8" class="sr-only" id="B8" value="B">
+                     <label for="B8">
+                         <img src="{{ url_for('static', filename='img/SpAb_Assess/8/B.PNG')}}" style="max-width: 100%" alt="B8">
+                     </label></div>
+                 <div class ="column">
+                     <input type="radio" name="paper8" class="sr-only" id="C8" value="C">
+                     <label for="C8">
+                         <img src="{{ url_for('static', filename='img/SpAb_Assess/8/C.PNG')}}" style="max-width: 100%" alt="C8">
+                     </label></div>
+                 <div class ="column">
+                     <input type="radio" name="paper8" class="sr-only" id="D8" value="D">
+                     <label for="D8">
+                         <img src="{{ url_for('static', filename='img/SpAb_Assess/8/D.PNG')}}" style="max-width: 100%" alt="D8">
+                     </label></div>
+                 <div class ="column">
+                     <input type="radio" name="paper8" class="sr-only" id="E8" value="E">
+                     <label for="E8">
+                         <img src="{{ url_for('static', filename='img/SpAb_Assess/8/E.PNG')}}" style="max-width: 100%" alt="E8">
+                     </label></div>
+ 
+             </fieldset>
+         </div>
+        </div>
+            <h4>Press Next after you've selected your guess!</h4>
+            <p><button id="btn8" class="w3-button w3-blue-gray w3-round-xlarge w3-margin-bottom">Next</button></p>
+
+            <script>
+                $(document).ready(function() {
+        
+                 var $button= $("#btn8").hide(),
+                $cbs = $('input[name="paper8"]').click(function() {
+                    $button.toggle( $cbs.is(":checked") );
+                  });
+    
+                });
+                </script>
+    </div>
+
+    <div id="Q9" style="display: none;">
+        <h1>Question 9
+        </h1>
+
+        <div class="w3-container">
+            <input type="image" src="{{ url_for('static', filename='img/SpAb_Assess/9/q.PNG')}}" width="45%" style="pointer-events: none; margin-top: 2em"/>
+            <hr style="border: 2px solid black; width: 50%; margin: auto; margin-bottom: 2em; margin-top: 2em" >
+         <div class="row" style="margin: auto">
+             <fieldset>
+                 <div class="column">
+                     <input type="radio" name="paper9" class="sr-only" id="A9" value="A">
+                     <label for="A9">
+                         <img src="{{ url_for('static', filename='img/SpAb_Assess/9/A.PNG')}}" style="max-width: 100%" alt="A9">
+                     </label></div>
+                 <div class ="column">
+                     <input type="radio" name="paper9" class="sr-only" id="B9" value="B">
+                     <label for="B9">
+                         <img src="{{ url_for('static', filename='img/SpAb_Assess/9/B.PNG')}}" style="max-width: 100%" alt="B9">
+                     </label></div>
+                 <div class ="column">
+                     <input type="radio" name="paper9" class="sr-only" id="C9" value="C">
+                     <label for="C9">
+                         <img src="{{ url_for('static', filename='img/SpAb_Assess/9/C.PNG')}}" style="max-width: 100%" alt="C9">
+                     </label></div>
+                 <div class ="column">
+                     <input type="radio" name="paper9" class="sr-only" id="D9" value="D">
+                     <label for="D9">
+                         <img src="{{ url_for('static', filename='img/SpAb_Assess/9/D.PNG')}}" style="max-width: 100%" alt="D9">
+                     </label></div>
+                 <div class ="column">
+                     <input type="radio" name="paper9" class="sr-only" id="E9" value="E">
+                     <label for="E9">
+                         <img src="{{ url_for('static', filename='img/SpAb_Assess/9/E.PNG')}}" style="max-width: 100%" alt="E9">
+                     </label></div>
+ 
+             </fieldset>
+         </div>
+        </div>
+            <h4>Press Next after you've selected your guess!</h4>
+            <p><button id="btn9" class="w3-button w3-blue-gray w3-round-xlarge w3-margin-bottom">Next</button></p>
+
+            <script>
+                $(document).ready(function() {
+        
+                 var $button= $("#btn9").hide(),
+                $cbs = $('input[name="paper9"]').click(function() {
+                    $button.toggle( $cbs.is(":checked") );
+                  });
+    
+                });
+                </script>
+    </div>
+
+    <div id="Q10" style="display: none;">
+        <h1>Question 10
+        </h1>
+
+        <div class="w3-container">
+            <input type="image" src="{{ url_for('static', filename='img/SpAb_Assess/10/q.PNG')}}" width="45%" style="pointer-events: none; margin-top: 2em"/>
+            <hr style="border: 2px solid black; width: 50%; margin: auto; margin-bottom: 2em; margin-top: 2em" >
+         <div class="row" style="margin: auto">
+             <fieldset>
+                 <div class="column">
+                     <input type="radio" name="paper10" class="sr-only" id="A10" value="A">
+                     <label for="A10">
+                         <img src="{{ url_for('static', filename='img/SpAb_Assess/10/A.PNG')}}" style="max-width: 100%" alt="A10">
+                     </label></div>
+                 <div class ="column">
+                     <input type="radio" name="paper10" class="sr-only" id="B10" value="B">
+                     <label for="B10">
+                         <img src="{{ url_for('static', filename='img/SpAb_Assess/10/B.PNG')}}" style="max-width: 100%" alt="B10">
+                     </label></div>
+                 <div class ="column">
+                     <input type="radio" name="paper10" class="sr-only" id="C10" value="C">
+                     <label for="C10">
+                         <img src="{{ url_for('static', filename='img/SpAb_Assess/10/C.PNG')}}" style="max-width: 100%" alt="C10">
+                     </label></div>
+                 <div class ="column">
+                     <input type="radio" name="paper10" class="sr-only" id="D10" value="D">
+                     <label for="D10">
+                         <img src="{{ url_for('static', filename='img/SpAb_Assess/10/D.PNG')}}" style="max-width: 100%" alt="D10">
+                     </label></div>
+                 <div class ="column">
+                     <input type="radio" name="paper10" class="sr-only" id="E10" value="E">
+                     <label for="E10">
+                         <img src="{{ url_for('static', filename='img/SpAb_Assess/10/E.PNG')}}" style="max-width: 100%" alt="E10">
+                     </label></div>
+ 
+             </fieldset>
+         </div>
+        </div>
+            <h4>Press Next after you've selected your guess!</h4>
+            <p><button onclick="submitanswer(10, true, StartTime)" id="btn10" class="w3-button w3-blue-gray w3-round-xlarge w3-margin-bottom">Next</button></a></p>
+
+            <script>
+                $(document).ready(function() {
+        
+                 var $button= $("#btn10").hide(),
+                $cbs = $('input[name="paper10"]').click(function() {
+                    $button.toggle( $cbs.is(":checked") );
+                  });
+    
+                });
+                </script>
+        </div>
+
+
+
+
+
+        <div class="w3-container center" style="margin-bottom: 15px">
+            <ol class="custom-progress-bar">
+                <li class="is-complete"><span>Intro</span></li>
+                <li class="is-complete"><span>Part 1 Training</span></li>
+                <li class="is-active"><span>Part 1</span></li>
+                <li><span>Part 2 Training</span></li>
+                <li><span>Part 2</span></li>
+                <li><span>Part 2</span></li>
+                <li><span>Part 2</span></li>
+                <li><span>Final Questions</span></li>
+                <li><span>End</span></li>
+            </ol>
+        </div>
+
+        <script>
+            var StartTime = Date.now()
+            setTimeout(function(){
+                window.location.href = "{{ url_for('transition') }}";
+            }, 3*60*1000);
+        </script>
+
+        <script>
+            function submitanswer(qNumber, shouldredirect, StartTimestamp){
+                var xhttp = new XMLHttpRequest();
+
+                xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                        if (shouldredirect){
+                            window.location.href = "{{ url_for('transition') }}"
+                        }
+                    }
+                }
+
+                const correctanswers = ["A", "D", "B", "D", "B", "E", "A", "C", "E", "E"]
+                var Answer = $("input[type=radio][name=paper" +qNumber+ "]:checked").val();
+                var EndTime = Date.now();
+                var time = EndTime-StartTimestamp;
+                var parameters = ""
+                parameters += "qNumber="+qNumber
+                parameters += "&Answer="+Answer
+                parameters += "&Time="+time
+                parameters += "&PaperEndTime="+EndTime
+                parameters += "&PaperStartTime="+StartTimestamp
+                parameters += "&CorrectA="+correctanswers[(qNumber-1)]
+                parameters += "&IsCorrect="+(correctanswers[(qNumber-1)] === Answer)
+                //update database
+                xhttp.open("POST", "/datafrompaper", true);
+                xhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+                xhttp.send(parameters);  
+
+            }
+
+            $(function () {
+                $('#btn1').click(function () {
+                   submitanswer(1, false, StartTime);
+                   StartTime = Date.now();
+                    $('#Q1').hide();
+                    $('#Q2').show();
+                });
+                $('#btn2').click(function () {
+                    submitanswer(2, false, StartTime);
+                   StartTime = Date.now();
+                    $('#Q2').hide();
+                    $('#Q3').show();
+                });
+                $('#btn3').click(function () {
+                    submitanswer(3, false, StartTime);
+                   StartTime = Date.now();
+                    $('#Q3').hide();
+                    $('#Q4').show();
+                });
+                $('#btn4').click(function () {
+                    submitanswer(4, false, StartTime);
+                   StartTime = Date.now();
+                    $('#Q4').hide();
+                    $('#Q5').show();
+                });
+                $('#btn5').click(function () {
+                    submitanswer(5,  false, StartTime);
+                   StartTime = Date.now();
+                    $('#Q5').hide();
+                    $('#Q6').show();
+                });
+                $('#btn6').click(function () {
+                    submitanswer(6,  false, StartTime);
+                   StartTime = Date.now();
+                    $('#Q6').hide();
+                    $('#Q7').show();
+                });
+                $('#btn7').click(function () {
+                    submitanswer(7,  false, StartTime);
+                   StartTime = Date.now();
+                    $('#Q7').hide();
+                    $('#Q8').show();
+                });
+                $('#btn8').click(function () {
+                    submitanswer(8,  false, StartTime);
+                   StartTime = Date.now();
+                    $('#Q8').hide();
+                    $('#Q9').show();
+                });
+                $('#btn9').click(function () {
+                    submitanswer(9, false, StartTime);
+                   StartTime = Date.now();
+                    $('#Q9').hide();
+                    $('#Q10').show();
+                });        
+            });
+        </script>
+
+<!--<script>
+    function getResponses() {
+        var q1 = document.getElementsByName('paper1');
+        var q2 = document.getElementsByName('paper2');
+        var q3 = document.getElementsByName('paper3');
+        var q4 = document.getElementsByName('paper4');
+        var q5 = document.getElementsByName('paper5');
+        var q6 = document.getElementsByName('paper6');
+        var q7 = document.getElementsByName('paper7');
+        var q8 = document.getElementsByName('paper8');
+        var q9 = document.getElementsByName('paper9');
+        var q10 = document.getElementsByName('paper10');
+
+        var adict = {};
+
+        for(i = 0; i < 5; i++) {
+            if(q1[i].checked)
+                adict["Q1"] = q1[i].value;
+        }
+
+        for(i = 0; i < 5; i++) {
+            if(q2[i].checked)
+                adict["Q2"] = q2[i].value;
+        }
+    }
+</script>-->
+
+
+{% endblock %}
