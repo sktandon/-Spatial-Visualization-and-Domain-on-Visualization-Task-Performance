@@ -1,0 +1,90 @@
+{% extends "layout.html" %}
+{% block title %}
+PODS KCL Survey
+{% endblock %}
+{% block style%}
+<style>
+body {
+    
+  background-color: #FAF5F0;
+}
+</style>
+{%endblock%}
+{% block bodyattributes%}
+onload = start();
+{% endblock %}
+
+{% block content %}
+
+
+<h1>Part 2 Training</h1>
+<br>
+<h5>Answer the question below the chart</h5>
+<br>
+ <script type="text/javascript" src="{{ url_for('static', filename='js/questions.js')}}"></script>
+
+<div class="bootstrap-iso">
+        <div class="container-fluid">
+            <div class="center">
+                <form method="post" id="trainingstimuli">
+                    <div class="form-group question" id="div_diff1">
+                        <label class="control-label " style="pointer-events: none;">
+                            <img id="question-Image" src = " " style="max-width: 100%"/>
+                            <div class="row">
+                                <div class="col">
+                                    <h3 id="column1">test</h3> 
+                                </div>
+                                <div class="col">
+                                    <h3 id="column2">test </h3>
+                                </div>
+                              </div>
+                            <br>
+                            <br>
+                            <h4 id="question-Text"><b>Test </b></h4>
+                        </label>
+                        <div style="text-align: center">
+                            <div class=" " id="responses-Text" style="font-size:larger; display: inline-block;
+                            text-align: left;">
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+<script type="text/javascript" src="{{ url_for('static', filename='js/TrainFunctions.js')}}"></script>
+
+
+<!--
+<div>
+        <canvas id='canvas' width="400"  height="160" style='outline: 1.5px black solid; margin-bottom: 1em; margin-top: 1em;'></canvas>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/game.js')}}"></script>
+
+</div>
+-->
+
+<!--<p><a href="{{ url_for('training_bp.trans') }}"><button class="w3-button w3-blue-gray w3-round-xlarge w3-margin-bottom">Next</button></a></p>-->
+<p><button type="button" onclick="next()" id="NextButton" class="w3-button w3-blue-gray w3-round-xlarge w3-margin-bottom">Next</button></p>
+
+
+<div class="w3-container center" style="margin-bottom: 15px">
+        <ol class="custom-progress-bar">
+                <li class="is-complete"><span>Intro</span></li>
+                <li class="is-complete"><span>Part 1 Training</span></li>
+                <li class="is-complete"><span>Part 1 Training</span></li>
+                <li class="is-complete"><span>Part 1</span></li>
+                <li class="is-active"><span>Part 2 Training</span></li>
+                <li><span>Part 2</span></li>
+                <li><span>Part 2</span></li>
+                <li><span>Part 2</span></li>
+                <li><span>Final Questions</span></li>
+                <li><span>End</span></li>
+            </ol>
+        </div>
+
+
+{% endblock %}

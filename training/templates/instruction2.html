@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+{% block title %}
+PODS KCL Survey
+{% endblock %}
+{% block style%}
+<style>
+body {
+    
+  background-color: #FAF5F0;
+}
+</style>
+{%endblock%}
+{% block bodyattributes%}
+onload = start();
+{% endblock %}
+
+{% block content %}
+
+<h1>Part 2 Training</h1>
+<h4 style="margin: 2em;">On each page you will see two charts and an associated multiple choice question.
+       <br><i>Look carefully - the responses will be randomized on every question.</i>
+        <br> 
+        <br>
+        Use the charts to answer the question to the best of your ability - 
+        when you have finished answering the question click Next. 
+        <br>
+        <br>
+        Please do not hit refresh in your broswer even if you experience some lag.
+</h4>
+
+
+<h4 style="color: green"> Click next when you're ready to try some training questions!</h4>
+<p><a href="{{ url_for('training_bp.Train1') }}"><button class="w3-button w3-blue-gray w3-round-xlarge w3-margin-bottom">Next</button></a></p>
+
+<div class="w3-container center" style="margin-bottom: 15px">
+        <ol class="custom-progress-bar">
+                <li class="is-complete"><span>Intro</span></li>
+                <li class="is-complete"><span>Part 1 Training</span></li>
+                <li class="is-complete"><span>Part 1</span></li>
+                <li class="is-active"><span>Part 2 Training</span></li>
+                <li><span>Part 2</span></li>
+                <li><span>Part 2</span></li>
+                <li><span>Part 2</span></li>
+                <li><span>Final Questions</span></li>
+                <li><span>End</span></li>
+            </ol>
+        </div>
+        
+        </ol>
+</div>
+
+
+{% endblock %}

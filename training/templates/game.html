@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+{% block title %}
+PODS KCL Survey
+{% endblock %}
+{% block style%}
+<style>
+body {
+    
+  background-color: #FAF5F0;
+}
+</style>
+
+{%endblock%}
+{% block bodyattributes%}
+onload = start();
+{% endblock %}
+
+{% block content %}
+
+
+        <h1>Part 1 Training: Let's play a game</h1>
+        <h4 style="margin-right: 5em; margin-left: 5em; margin-top: 2em; margin-bottom: 2em;">
+                On each page you will see this game at the bottom of the screen. 
+                <br>
+                <br>
+                Click the circles that are the same color as the target color circle at the bottom!
+                <br>
+                <br>
+                <span style="color: red;">Watch out - the target color changes 
+                often!</span> 
+                <br>
+                <br>
+                Remember - you will play this game on every page - your <em>first priority should be to interact with the graphs 
+                you see on each page</em>. Your second priority will be playing this game!
+                <br>
+                <br>
+                 Click next when you understand how to play the game and are ready to move on.
+        </h4>
+
+
+      <!--<div class="box center w3-margin-top w3-margin-bottom"><h5>Distractor Task will take place here</h5></div>-->
+
+      <div>
+        <canvas id='canvas' width="400" height="160" style='outline: 1.5px black solid; margin-bottom: 1em; margin-top: 1em;'></canvas>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/game.js')}}"></script>
+
+      </div>
+
+
+        <p><a href="{{ url_for('training_bp.instruction') }}"><button class="w3-button w3-blue-gray w3-round-xlarge w3-margin-bottom">Next</button></a></p>
+
+        
+        <div class="w3-container center" style="margin-bottom: 15px">
+                <ol class="custom-progress-bar">
+                  <li class="is-complete"><span>Intro</span></li>
+                  <li class="is-active"><span>Part 1 Training</span></li>
+                    <li><span>Part 1</span></li>
+                    <li><span>Part 1</span></li>
+                    <li><span>Part 1</span></li>
+                    <li><span>Part 2 Training</span></li>
+                    <li><span>Part 2</span></li>
+                    <li><span>Last Question</span></li>
+                    <li><span>End</span></li>
+                </ol>
+        </div>
+       
+
+
+{% endblock %}
